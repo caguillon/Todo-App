@@ -1,7 +1,8 @@
 package com.example.caguillon.todoapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,7 +14,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 writeItems();
                 return true;
             }
-        })
+        });
 
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
